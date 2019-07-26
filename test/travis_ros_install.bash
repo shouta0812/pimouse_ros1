@@ -1,8 +1,10 @@
-red packages
-pip install catkin_pkg
-pip install empy
-pip install pyyaml
-pip install rospkg
+#!/bin/bash -xve
+
+#required packages
+sudo pip install catkin_pkg
+sudo pip install empy
+sudo pip install pyyaml
+sudo pip install rospkg
 
 #ros install
 cd ..
@@ -19,6 +21,3 @@ catkin_init_workspace
 cd ~/catkin_ws
 catkin_make
 
-# Copyright 2016 Ryuichi Ueda
-# Released under the BSD License.
-# To make line numbers be identical with the book, this statement is written here. Don't move it to the header.

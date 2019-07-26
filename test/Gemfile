@@ -1,0 +1,34 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+ruby '~> 2.4' # Rubyのバージョンを記載
+# 指定しておくと、別のRubyバージョンでGemfileが読まれたときに例外を発生させることが出来る
+
+########################################
+# 各インストールしたいバージョンの書き方
+########################################
+gem 'rails', '5.2.2'    # 5.2.2 固定
+
+gem 'rails', '>= 5.2.0'              # 5.2.0 以上の最新
+gem 'rails', '>= 5.2.0', "< 5.2.2"   # 5.2 以上、5.2.2 未満
+
+gem 'rails', '~> 5.2.2' # 5.2.2 以上、5.3.0 未満の最新
+gem 'rails', '~> 5.2'   # 5.2 以上、6.0 未満の最新
+# 記載した一番末端の数値のみ最新に追従するということ
+
+########################################
+# Ruby on Railsの各環境別の書き方
+########################################
+# dev環境のみに反映したいgem
+group :development do
+  gem 'hoge'
+end
+
+# dev環境とtest環境に反映したいgem
+group :development, :test do
+  gem 'hoge'
+end
+
+#git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"
