@@ -8,6 +8,7 @@ from pimouse_ros.msg import MotorFreqs
 from geometry_msgs.msg import Twist
 from std_srvs.srv import Trigger, TriggerResponse  #追加
 from pimouse_ros.srv import TimedMotion
+
 class MotorTest(unittest.TestCase):
     def setUp(self):                               #このメソッドを追加
         rospy.wait_for_service('/motor_on')
