@@ -4,7 +4,7 @@
 import unittest, rostest
 import rosnode, rospy
 import time
-from pimouse_ros.msg import MotorFreqs
+from pimouse_ros1.msg import MotorFreqs
 from geometry_msgs.msg import Twist
 from std_srvs.srv import Trigger, TriggerResponse  #追加
 #from pimouse_ros.srv import TimedMotion
